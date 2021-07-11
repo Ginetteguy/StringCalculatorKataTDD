@@ -1,3 +1,4 @@
+using System;
 using NUnit.Framework;
 using SimpleCalculator;
 
@@ -63,6 +64,16 @@ namespace StringCalculatorTest
 
             // Assert
             Assert.AreEqual(6, result);
+        }
+
+        [Test]
+        public void WhenEndingWithSeparator_ShouldReturnException()
+        {
+            // Arrange
+            const string input = "1,2,3,";
+
+            // Setup and Assert
+            Assert.Throws(typeof(ArgumentException), ()=>StringCalculator.Add(input));
         }
     }
 }
