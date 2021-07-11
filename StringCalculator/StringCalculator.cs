@@ -9,7 +9,7 @@ namespace SimpleCalculator
             if (string.IsNullOrEmpty(input))
                 return 0;
 
-            string[] inputs = input.Split(',');
+            string[] inputs = input.Split(new char[] { ',', '\n' });
             int result = 0;
             Array.ForEach(inputs, delegate (string number) { result += Convert.ToInt32(number); });
             return result;

@@ -51,5 +51,18 @@ namespace StringCalculatorTest
             // Assert
             Assert.AreEqual(3, result);
         }
+
+        [Test]
+        public void WhenAdding1Comma2NewLine3_ShouldReturn6()
+        {
+            // Arrange
+            const string input = "1,2\n3";
+
+            // Setup
+            int result = StringCalculator.Add(input);
+
+            // Assert
+            Assert.AreEqual(6, result);
+        }
     }
 }
