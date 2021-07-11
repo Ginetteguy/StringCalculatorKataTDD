@@ -38,5 +38,18 @@ namespace StringCalculatorTest
             // Assert
             Assert.AreEqual(1, result);
         }
+
+        [Test]
+        public void WhenAdding1And2_ShouldReturn3()
+        {
+            // Arrange
+            const string input = "1,2";
+
+            // Setup
+            int result = StringCalculator.Add(input);
+
+            // Assert
+            Assert.AreEqual(3, result);
+        }
     }
 }
